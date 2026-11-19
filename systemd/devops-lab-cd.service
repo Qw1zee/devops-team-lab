@@ -1,0 +1,8 @@
+[Unit]
+Description=Check GitHub CI and deploy DevOps VM Lab
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/devops-lab-cd.sh

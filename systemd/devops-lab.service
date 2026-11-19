@@ -1,0 +1,17 @@
+[Unit]
+Description=DevOps VM Lab (Gunicorn)
+After=network.target
+
+[Service]
+Type=simple
+User=deploylab
+Group=deploylab
+WorkingDirectory=/home/deploylab/app
+ExecStart=/home/deploylab/app/.venv/bin/gunicorn --bind 127.0.0.1:5055 --workers 2 app:app
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

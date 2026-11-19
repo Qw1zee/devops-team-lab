@@ -1,0 +1,11 @@
+[Unit]
+Description=Every 5 minutes: deploy passed main commit to VM
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+Unit=devops-lab-cd.service
+
+[Install]
+WantedBy=timers.target
