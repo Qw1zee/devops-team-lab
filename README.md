@@ -11,3 +11,10 @@ Use the companion Word guide for *ordered setup instructions*. Do not copy files
 - `systemd/devops-lab-cd.service` and `.timer`: execute deployment poll every 5 minutes, after manual enablement.
 
 **Important:** No Docker or incoming SSH from GitHub Actions is required at this stage; the VM pulls approved code outbound over HTTPS. The 5055 port is bound to loopback. For real production, add release immutability, rollback, package locking and threat modeling.
+
+## Developer Two
+
+This section was added by dev2.
+
+The project uses pytest for automated tests
+and Ruff for Python code quality checks.
