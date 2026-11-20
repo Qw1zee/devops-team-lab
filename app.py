@@ -10,7 +10,7 @@ def create_app() -> Flask:
 
     @app.get("/")
     def index():
-        return jsonify(message="DevOps team lab", version=os.getenv("APP_VERSION", "dev"))
+        return jsonify(message="DevOps team lab v2", version=os.getenv("APP_VERSION", "dev"))
 
     @app.get("/health")
     def health():
